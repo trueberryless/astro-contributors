@@ -1,6 +1,6 @@
 {
   "projectName": "astro-contributors",
-  "projectOwner": "trueberryless-org",
+  "projectOwner": "trueberryless",
   "repoType": "github",
   "repoHost": "https://github.com",
   "files": ["README.md"],
@@ -54,7 +54,7 @@
       "login": "trueberryless-org[bot]",
       "name": "trueberryless-org[bot]",
       "avatar_url": "https://avatars.githubusercontent.com/in/1100768?s=60&v=4",
-      "profile": "https://github.com/trueberryless-org",
+      "profile": "https://github.com/trueberryless",
       "contributions": ["maintenance"]
     },
     {

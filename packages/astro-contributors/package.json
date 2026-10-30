@@ -14,11 +14,11 @@
   ],
   "homepage": "https://astro-contributors.netlify.app/",
   "bugs": {
-    "url": "https://github.com/trueberryless-org/astro-contributors/issues"
+    "url": "https://github.com/trueberryless/astro-contributors/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/trueberryless-org/astro-contributors.git",
+    "url": "https://github.com/trueberryless/astro-contributors.git",
     "directory": "packages/astro-contributors"
   },
   "license": "MIT",
