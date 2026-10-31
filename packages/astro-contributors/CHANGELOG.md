@@ -1,5 +1,11 @@
 # astro-contributors
 
+## 0.10.1
+
+### Patch Changes
+
+- [#134](https://github.com/trueberryless/astro-contributors/pull/134) [`040c35a`](https://github.com/trueberryless/astro-contributors/commit/040c35a153bc8d27b8557bf14f15d4ad372209f9) Thanks [@trueberryless-bot](https://github.com/trueberryless-bot)! - Updates the repository links after the move from the `trueberryless-org` GitHub organization to the `trueberryless` account.
+
 ## 0.10.0
 
 ### Minor Changes
