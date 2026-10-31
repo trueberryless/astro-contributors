@@ -42,17 +42,10 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - name: Generate GitHub App token
-        id: generate_token
-        uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
-        with:
-          client-id: ${{ secrets.BOT_APP_ID }}
-          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
-
       - name: Checkout Repo
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
-          token: ${{ steps.generate_token.outputs.token }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           persist-credentials: true
 
       - name: Setup PNPM
@@ -73,13 +66,15 @@ jobs:
         with:
           version-script: pnpm run version
           commit-message: "ci: release"
-          pr-title: "ci: release [skip netlify]"
-          github-token: ${{ steps.generate_token.outputs.token}}
+          pr-title: "ci: release"
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           push-with-git-cli: true
 
       - name: Get published version
         if: steps.changesets.outputs.has-changesets == 'true'
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git checkout changeset-release/main
           VERSION=$(node -p "require('./packages/astro-contributors/package.json').version")
           NAME=$(node -p "require('./packages/astro-contributors/package.json').name")
@@ -165,23 +160,3 @@ jobs:
           makeLatest: true
           body: ${{ steps.extract-changelog.outputs.markdown }}
           skipIfReleaseExists: true
-
-      - name: Check if release was created
-        id: check_release
-        run: |
-          if [ -z "${{ steps.create_release.outputs.html_url }}" ]; then
-            echo "RELEASE_SKIPPED=true" >> $GITHUB_ENV
-          else
-            echo "RELEASE_SKIPPED=false" >> $GITHUB_ENV
-          fi
-
-      - name: Discord notification
-        if: env.RELEASE_SKIPPED == 'false'
-        env:
-          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK_URL }}
-        uses: Ilshidur/action-discord@d2594079a10f1d6739ee50a2471f0ca57418b554 # 0.4.0
-        with:
-          args: |
-            # ${{ env.IMAGE_NAME }}@${{ needs.image-tag.outputs.IMAGE_TAG }}
-
-            ${{ steps.extract-changelog.outputs.markdown }}
