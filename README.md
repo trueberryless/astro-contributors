@@ -10,7 +10,7 @@ Read the [Astro Contributors docs](https://astro-contributors.netlify.app).
 
 ## Package
 
-If you are looking for the Astro components package, you can find it in the [`packages/astro-contributors/`](https://github.com/trueberryless-org/astro-contributors/tree/main/packages/astro-contributors) directory.
+If you are looking for the Astro components package, you can find it in the [`packages/astro-contributors/`](https://github.com/trueberryless/astro-contributors/tree/main/packages/astro-contributors) directory.
 
 ## Project structure
 
@@ -20,4 +20,4 @@ This project uses pnpm workspaces to develop a single Astro components package f
 
 Licensed under the MIT License, Copyright © trueberryless.
 
-See [LICENSE](https://github.com/trueberryless-org/astro-contributors/blob/main/LICENSE) for more information.
+See [LICENSE](https://github.com/trueberryless/astro-contributors/blob/main/LICENSE) for more information.

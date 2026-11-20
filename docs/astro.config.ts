@@ -1,5 +1,5 @@
 import starlight from "@astrojs/starlight";
-import starlightPluginsDocsComponents from "@trueberryless-org/starlight-plugins-docs-components";
+import starlightPluginsDocsComponents from "@trueberryless/starlight-plugins-docs-components";
 import { defineConfig } from "astro/config";
 
 import markdocGrammar from "./grammars/markdoc.tmLanguage.json";
@@ -41,7 +41,7 @@ export default defineConfig({
       ],
       editLink: {
         baseUrl:
-          "https://github.com/trueberryless-org/astro-contributors/edit/main/docs/",
+          "https://github.com/trueberryless/astro-contributors/edit/main/docs/",
       },
       customCss: ["./src/styles/custom.css"],
       expressiveCode: { shiki: { langs: [markdocGrammar] } },
@@ -64,7 +64,7 @@ export default defineConfig({
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/trueberryless-org/astro-contributors",
+          href: "https://github.com/trueberryless/astro-contributors",
         },
       ],
       plugins: [

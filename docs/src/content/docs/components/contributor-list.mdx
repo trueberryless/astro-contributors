@@ -10,7 +10,7 @@ Display all GitHub code contributors of a repository.
 
 <Preview>
 
-<ContributorList slot="preview" githubRepo="trueberryless-org/astro-contributors" />
+<ContributorList slot="preview" githubRepo="trueberryless/astro-contributors" />
 
 </Preview>
 
@@ -33,18 +33,18 @@ Display the code contributors of a GitHub repository using the `<ContributorList
 ```mdx
 import { ContributorList } from "astro-contributors";
 
-<ContributorList githubRepo="trueberryless-org/astro-contributors" />
+<ContributorList githubRepo="trueberryless/astro-contributors" />
 ```
 
 <Fragment slot="markdoc">
 
 ```markdoc
-{% contributorlist githubRepo="trueberryless-org/astro-contributors" /%}
+{% contributorlist githubRepo="trueberryless/astro-contributors" /%}
 ```
 
 </Fragment>
 
-<ContributorList slot="preview" githubRepo="trueberryless-org/astro-contributors" />
+<ContributorList slot="preview" githubRepo="trueberryless/astro-contributors" />
 
 </Preview>
 
@@ -72,10 +72,10 @@ This feature is very useful if you have a bot account that you don't want to dis
 ```mdx
 import { ContributorList } from "astro-contributors"
 
-<ContributorList githubRepo="trueberryless-org/astro-contributors" ignore={["autofix-ci[bot]", "github-actions[bot]", "renovate[bot]"]} />
+<ContributorList githubRepo="trueberryless/astro-contributors" ignore={["autofix-ci[bot]", "github-actions[bot]", "renovate[bot]"]} />
 ```
 
-<ContributorList slot="preview" githubRepo="trueberryless-org/astro-contributors" ignore={["autofix-ci[bot]", "github-actions[bot]", "renovate[bot]"]} />
+<ContributorList slot="preview" githubRepo="trueberryless/astro-contributors" ignore={["autofix-ci[bot]", "github-actions[bot]", "renovate[bot]"]} />
 
 </Preview>
 
@@ -94,14 +94,14 @@ If not provided, the component will first check for a global CSS variable named 
 import { ContributorList } from "astro-contributors"
 
 <ContributorList
-  githubRepo="trueberryless-org/astro-contributors"
+  githubRepo="trueberryless/astro-contributors"
   focusColor="#ff5733"
 />
 ```
 
 <ContributorList
   slot="preview"
-  githubRepo="trueberryless-org/astro-contributors"
+  githubRepo="trueberryless/astro-contributors"
   focusColor="#ff5733"
 />
 
@@ -124,15 +124,15 @@ For example, you can use this to link directly to their commit history in the re
 import { ContributorList } from "astro-contributors"
 
 <ContributorList
-  githubRepo="trueberryless-org/astro-contributors"
-  formatLink={(username) => `https://github.com/trueberryless-org/astro-contributors/commits?author=${username}`}
+  githubRepo="trueberryless/astro-contributors"
+  formatLink={(username) => `https://github.com/trueberryless/astro-contributors/commits?author=${username}`}
 />
 ```
 
 <ContributorList
   slot="preview"
-  githubRepo="trueberryless-org/astro-contributors"
-  formatLink={(username) => `https://github.com/trueberryless-org/astro-contributors/commits?author=${username}`}
+  githubRepo="trueberryless/astro-contributors"
+  formatLink={(username) => `https://github.com/trueberryless/astro-contributors/commits?author=${username}`}
 />
 
 </Preview>
