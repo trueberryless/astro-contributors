@@ -1,5 +1,11 @@
 # astro-contributors
 
+## 0.10.2
+
+### Patch Changes
+
+- [#136](https://github.com/trueberryless/astro-contributors/pull/136) [`e8c549c`](https://github.com/trueberryless/astro-contributors/commit/e8c549cd75e5289f03a908e2f6e8da9c233c96c4) Thanks [@trueberryless-bot](https://github.com/trueberryless-bot)! - Fixes `ContributorList` fetching the contributors of the same GitHub repository again for every render during a build.
+
 ## 0.10.1
 
 ### Patch Changes
